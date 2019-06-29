@@ -1,0 +1,340 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    min-width: 900px;
+}
+.wrapper {
+	width: 100%;
+	position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.header {
+    background-image: url(../img/sample2.jpg);
+    background-size: cover;
+    height: 100vh;
+    color: #ffffff;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.container p {
+    text-transform: uppercase;
+    margin-top: 25px;
+    letter-spacing: 3px;
+    padding-left: 40px;
+}
+.login {
+    display: inline-flex;
+    padding: 25px 40px;
+    justify-content: center;
+}
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+h2 {
+    font-weight: normal;
+}
+.mainText {
+    height: 70vh;
+    text-align: center;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.mainText h2 {
+    text-transform: uppercase;
+    font-size: 3em;
+    letter-spacing: 7px;
+    margin-bottom: 0;
+}
+.mainText span {
+    font-size: 2em;
+}
+.mainText p {
+    font-size: 0.7em;
+    margin-top: 0;
+}
+.about {
+    text-align: center;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.about a {
+    display: flex;
+	align-items: center;
+	justify-content: center;
+    height: 50px;
+    width: 200px;
+	border: 2px solid #F3F3F3;
+}	
+.read {
+	width: 100%;
+	height: 40vh;
+	position: relative;
+	background: linear-gradient(to top right, #F3F3F3 50%, #000 50%);
+}
+.read p:first-child {
+    font-weight: 400;
+    max-width: 50%;
+	padding-right: 50px;
+    float: right;
+	color: #F3F3F3;
+}
+.read p:nth-child(2) {
+    font-size: 14px;
+	font-weight: 400;
+    padding-bottom: 5%;
+	padding-left: 50px;
+    float: left;
+	color: #000;
+	position: absolute;
+	bottom: 15%;
+    max-width: 30%;
+}
+.read p:nth-child(2) span {
+	font-weight: 800;
+}
+.read h2 {
+    width: 100%;
+    bottom: 0px;
+    font-size: 26px;
+    font-weight: 400;
+	text-align: center;
+	position: absolute;
+}
+.read h2 span {
+    font-size: 26px;
+    font-weight: 800;
+}
+.articles {
+	width: 100%;
+    height: 100vh;
+    padding: 30px 50px;
+    background-color: #F3F3F3;
+    display: flex;
+	flex-direction: column;
+}
+.article1 {
+    width: 100%;
+    height: 50%;
+}
+.articleImg {
+    width: 50%;
+	height: 100%;
+    position: relative;
+	float: left;
+	background-image: url(../img/sample-1.jpg);
+	background-size: cover;
+}
+.articleText {
+    width: 50%;
+	height: 100%;
+    float: right;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: flex-end;
+}
+.articleText p {
+    margin-top: 8%;
+    padding-left: 15%;
+	text-align: center;
+}
+.article2 {
+    width: 100%;
+    height: 50%;
+	margin-top: 1%;
+}
+.articleText2 {
+    width: 50%;
+	height: 100%;
+    float: left;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: flex-start;
+}
+.articleText2 p {
+    margin-top: 8%;
+    padding-right: 15%;
+	text-align: center;
+}
+.articleImg2 {
+    width: 50%;
+    height: 100%;
+    position: relative;
+	float: right;
+	background-image: url(../img/sample-2.jpg);
+	background-size: cover;
+}
+.like {
+    width: 65px;
+	height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+	border: 2px solid #fff;
+    right: 5%;
+    top: 5%;
+	position: absolute;
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+}
+.articleImg p {
+	bottom: 5%;
+	left: 5%;
+    color: #fff;
+    position: absolute;
+}
+.articleImg p span {
+	font-weight: 600;
+}
+.articleImg2 p {
+	bottom: 5%;
+	left: 5%;
+    color: #fff;
+    position: absolute;
+}
+.articleImg2 p span {
+	font-weight: 600;
+}
+.explore {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+} 
+.images {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.greece {
+    width: 200px;
+    height: 270px;
+    background-image: url(../img/news-list-1.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+}
+.italy {
+    width: 200px;
+    height: 270px;
+    background-image: url(../img/news-list-2.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+}
+.usa {
+    width: 200px;
+    height: 270px;
+    background-image: url(../img/news-list-3.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+}
+.germany {
+    width: 200px;
+    height: 270px;
+    background-image: url(../img/news-list-4.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+}
+.likes {
+	width: 50px;
+	height: 30px;
+    color: #fff;
+	background-color: rgba(0, 0, 0, 0.5 );
+    border: 2px solid #fff;
+	top: 5%;
+	margin-right: 5%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.find {
+    width: 90%;
+    height:15%;
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #097774;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.8;
+    margin-right: 5%;
+    margin-top: 25%;
+}
+.date {
+    color: #ffffff;
+    margin-left: 6%;
+    margin-top: 27%;
+}
+.header_button {
+    margin: 50px 0;
+    color: #ffffff;
+    width: 250px;
+    height: 50px;
+    font-size: 16px;
+    background-color: #097774;
+    border: none;
+}
+ .form {
+    background-color: #F3F3F3;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    text-align: center;
+}
+.email {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.email h2 {
+    margin: 0;
+}
+.input {
+    padding: 10px;
+    margin-left: 30px;
+}
+.suscribe {
+    padding: 12px;
+    margin-left: 10px;
+    background-color: #097774;
+    border: none;
+    color: #ffffff;
+}
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.copy {
+    color: #9E9E9E;
+}
+.nav li {
+    list-style: none;
+    display: inline;
+    padding: 0 15px;
+}
+.nav li a {
+    color: #000000;
+}
+
