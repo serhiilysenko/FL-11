@@ -1,0 +1,71 @@
+
+:root {
+  --bg-color--dark: #0b192f;
+  --bg-color--header: #162b4d;
+  --link: #fff;
+  --link--hover: #b8b8b8;
+  --bg-footer-color: #162b4d;;
+}
+
+body {
+  font-family: roboto;
+  background-color: #0b192f;
+  display: grid;
+
+}
+header {
+  color: #fff;
+  background-color: #162b4d;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;  
+  align-items: center;
+}
+header span {
+  color: #B71757;
+  font-weight: 100;
+}
+header h2 {
+  padding-left: 15px;
+}
+header a {
+  padding: 0 10px;
+  color: #fff;
+  text-decoration: none;
+}
+.nav {
+  margin-right: 50px
+}
+
+
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: #b8b8b8;
+  background-color: #162b4d;
+ 
+
+}
+footer p {
+  margin: 30px 30px;
+}
+.post-1 {
+	background: #B71757;
+}
+.post-2 {
+	background: #0D7E71;
+}
+.post-3 {
+	background: #b1660e;
+}
+.post-4 {
+	background: #d12767;
+}
+.post-5 {
+	background: #2d95bb;
+}
+
+/* Your styles go here */
