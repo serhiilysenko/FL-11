@@ -1,17 +1,18 @@
-
-:root {
-  --bg-color--dark: #0b192f;
-  --bg-color--header: #162b4d;
-  --link: #fff;
-  --link--hover: #b8b8b8;
-  --bg-footer-color: #162b4d;;
-}
-
 body {
   font-family: roboto;
   background-color: #0b192f;
+  box-sizing: border-box;
+}
+.wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
   display: grid;
-
+  grid-template-columns: 2fr .7fr;
+  grid-template-areas:
+  "header header"
+  "mainarea sidebar"
+  "footer footer";
+  grid-gap: 1.5vw;
 }
 header {
   color: #fff;
@@ -20,6 +21,7 @@ header {
   flex-direction: row;
   justify-content: space-between;  
   align-items: center;
+  grid-area: header;
 }
 header span {
   color: #B71757;
@@ -36,21 +38,48 @@ header a {
 .nav {
   margin-right: 50px
 }
-
-
-
-footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  color: #b8b8b8;
-  background-color: #162b4d;
- 
-
+.sandwich {
+  display: none;
 }
-footer p {
-  margin: 30px 30px;
+.mainArea {
+  grid-area: mainarea;
+  display: flex;
+  flex-direction: column; 
+}
+.mainArea > div {
+  display: grid;
+  grid-template-columns: 2fr 1.6fr 0.4fr;
+  grid-template-areas:
+  "img text date";
+}
+.mainArea > div:nth-child(even) {
+  grid-template-columns: 0.4fr 1.6fr 2fr;
+  grid-template-areas:
+  "date text img";
+  text-align: right;
+}
+.mainArea .img {
+  grid-area: img;
+  width: 100%;
+  height: 100%;
+}
+.mainArea .img:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+.mainArea h2 {
+  font-weight: lighter;
+  font-size: 3.3vw;
+  margin-bottom: 0.5em;
+}
+.mainArea .text {
+  grid-area: text;
+  color: white;
+  padding: 2.5em;
+}
+.mainArea .text:hover {
+  cursor: pointer;
+  opacity: 0.6;
 }
 .post-1 {
 	background: #B71757;
@@ -67,5 +96,212 @@ footer p {
 .post-5 {
 	background: #2d95bb;
 }
+.mainArea .post-5 {
+  display: grid;
+  grid-template-areas:
+  "text text date";
+  grid-template-columns: 2fr 1.6fr 0.4fr;
+}
+.mainArea p {
+  font-size: 1.1em;
+  font-weight: 300;
+  line-height: 1.2em;
+}
+.date {
+  grid-area: date;
+  font-size: 3vw;
+  text-align: center;
+  color: white;
+  opacity: 0.5;
+}
+.date p {
+  font-weight: lighter;
+  margin-top: 0.4em;
+}
+.date span {
+  display: block;
+  font-size: 2vw;
+  line-height: 1;
+}
+.sideBar {
+  grid-area: sidebar;
+  display: flex;
+  flex-direction: column;
+}
+.post {
+  background: white;
+  color: black;
+  margin-bottom: 1.5vw;
+}
+.post img {
+  max-width: 100%;
+}
+.post .text {
+  padding: 2.5em;
+}
+.post h2 {
+  font-size: 2.1em;
+  font-weight: 300;
+  margin-bottom: 0.5em;
+}
+.post p {
+  font-size: 1.1em;
+  font-weight: 300;
+  line-height: 1.2em;
+}
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: #b8b8b8;
+  background-color: #162b4d;
+  max-width: 1400px;
+  grid-area: footer;
+}
+footer p {
+  margin: 30px 30px;
+}
+@media only screen and (min-width: 1401px) {
+  body {
+    font-size: 1rem;
+    margin: 0 auto;
+  }
+  .nav a {
+    font-size: 1.3rem;
+  }
+  .mainArea p, .sideBar p {
+    line-height: 1.5em;
+  }
+  .logo, .date, .mainArea h2 {
+    font-size: 3rem;
+  }
+  .date span {
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 1.5vw;
+  }
+  .wrapper {
+    max-width: 1400px;
+    margin: 0 1vw;
+    display: grid;
+    
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-areas:
+    "header header"
+    "mainarea sidebar"
+    "footer footer";
+  }
+  .sandwich {
+    display: block;
+    margin: 2vw;
+    font-size: 2em;
+  }
+  header {
+    
+    flex-direction: column;
+  }
+  .logo {
+    margin-bottom: 2vw;
+    font-size: 5vw;
+  }
+  .nav {
+    display: none;
+  }
+  .mainArea > div, .mainArea > div:nth-child(even) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1.6fr 0.6fr;
+    grid-template-areas: "img" "text" "date";
+    text-align: left;
+  }
+  .mainArea .post-5 {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 0.6fr;
+    grid-template-areas:"text" "date";
+    padding-bottom: 1em;
+  }
+  .mainArea p {
+    font-size: 1.4em;
+    font-weight: 300;
+    line-height: 1.3;
+  }
+  .mainArea h2 {
+    font-size: 4em;
+  }
+  .post p {
+    font-size: 1.4em;
+    font-weight: 300;
+    line-height: 1.3;
+  }
+  .date p {
+    font-size: 1.7em;
+    font-weight: lighter;
+  }
+  .date span {
+    font-size: 0.6em;
+  }
+  footer {
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    padding: 21px;
+  }
+  footer p {
+    text-align: center;
+    margin: 10px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .body {
+    font-size: 2vw;
+  }
+  .wrapper {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "header"
+    "mainarea"
+    "sidebar"
+    "footer";
+  }
+  .sandwich {
+    font-size: 3em;
+  }
+  header {
+    line-height: 2;
+  }
+  .logo {
+    font-size: 5em;
+  }
+  .nav {
+    display: none;
+  }
+  .mainArea .text {
+    padding: 3em;
+  }
+  .mainArea h2 {
+    font-size: 5em;
+  }
+  .mainArea p {
+    font-size: 2.3em;
+  }
+  .date {
+    font-size: 5vw;
+  }
+  .post {
+    font-size: 1.5em;
+  }
+  footer {
+    font-size: 1.5em;
+    margin: 0;
+    padding: 10px;
+  }
+  footer p {
+    margin: 0;
+  }
+}
 
-/* Your styles go here */
+
+
