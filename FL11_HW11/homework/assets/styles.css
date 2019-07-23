@@ -1,2 +1,109 @@
-/* Your styles goes here */
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  [draggable] {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    -khtml-user-drag: element;
+    -webkit-user-drag: element;
+  }
+  button {
+    border: 0;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  #root {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-weight: 900;
+    color: lightskyblue;
+    font-size: 2em;
+  }
+  .todo_main {
+    width: 800px;
+    height: 600px;
+    border: 1px solid lightslategrey;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .todo_main header {
+    height: 40px;
+  }
+  .todo_title {
+    text-align: center;
+    font-weight: 900;
+  }
+  #warningText {
+    text-align: center;
+    display: none;
+    color: red;
+  }
+  .todo_input_form {
+    height: 100px;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-bottom: 5px solid #e6f9fe;
+    align-items: center;
+  }
+  ::placeholder {
+    color: #d1d0d0;
+  }
+  #inputText {
+    width: 95%;
+    font-size: 14px;
+    border: 1px solid #d1d0d0;
+    border-radius: 3px;
+    padding: 4px 20px;
+    height: 50px;
+  }
+  #todo_list {
+    list-style: none;
+    margin: 15px;
+    width: 96%; 
+    color: #d1d0d0;
+  }
+  .list_item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    height: 35px;
+    cursor: move;
+  }
+  .delete_item {
+    margin-right: 10px;
+    margin-left: auto;
+    color: lightskyblue;
+  }
+  .text {
+    color: lightskyblue;
+  }
+  .material-icons {
+    cursor: pointer;
+    font-size: 40px;
+  }
+  .material-icons.add_box {
+    color: #d1d0d0;
+  }
+  .material-icons.edit_item,
+  .material-icons.save_item {
+    color: lightskyblue;
+    padding-left: 15px;
+  }
+  .done {
+    display: none;
+  }
+  
